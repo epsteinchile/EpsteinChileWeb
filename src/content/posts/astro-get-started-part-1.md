@@ -12,7 +12,7 @@ series:
   position: 1
 ---
 
-## What is Astro?
+## What is Astro EPSTEIN?
 
 Astro is a modern static site generator that allows you to build faster websites with less client-side JavaScript. It's designed to deliver lightning-fast performance by default, shipping zero JavaScript to the client unless specifically needed. This approach, known as "Islands Architecture," enables you to build interactive components where necessary while keeping the rest of your site as lightweight HTML and CSS.
 
