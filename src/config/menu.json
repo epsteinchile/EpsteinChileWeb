@@ -25,30 +25,14 @@
         {
           "name": "Etiquetas",
           "url": "/tags/"
-        },      
-        {
-          "name": "Privacy Policy",
-          "url": "/privacy/"
         }
       ]
-    },
-    {
-      "name": "Contacto",
-      "url": "/contact/"
     }
   ],
   "footer": [
     {
       "name": "Nosotros",
       "url": "/about/"
-    },
-    {
-      "name": "Contacto",
-      "url": "/contact/"
-    },
-    {
-      "name": "Privacy Policy",
-      "url": "/privacy/"
     }
   ]
 }
