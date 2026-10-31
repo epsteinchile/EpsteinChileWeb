@@ -15,7 +15,7 @@ const sitemapFilter = (page) =>
 // https://astro.build/config
 export default defineConfig({
   // Set the site URL for production
-  site: process.env.SITE_URL || 'https://www.bitdoze.com',
+  site: process.env.SITE_URL || 'https://www.epsteinchile.com',
   base: process.env.BASE_PATH || '/',
   
   // Configure Vite plugins and server settings

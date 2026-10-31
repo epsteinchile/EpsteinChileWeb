@@ -22,7 +22,6 @@
         "@astrojs/rss": "^4.0.19",
         "@astrojs/sitemap": "^3.7.4",
         "@fontsource-variable/bricolage-grotesque": "^5.3.0",
-        "@iconify-json/mdi": "^1.2.3",
         "@tailwindcss/vite": "^4.3.3",
         "astro": "^7.3.2",
         "astro-icon": "^1.2.0",
@@ -31,10 +30,11 @@
     },
     "devDependencies": {
         "@astrojs/check": "^0.9.9",
-        "@tailwindcss/typography": "^0.5.20",
+        "@iconify-json/mdi": "^1.2.3",
+        "@tailwindcss/typography": "^0.5.4",
         "typescript": "^6.0.3",
         "vite": "^8.2.2",
-        "vitest": "^4.1.9"
+        "vitest": "^4.1.12"
     },
     "overrides": {
         "yaml": "^2.8.3"

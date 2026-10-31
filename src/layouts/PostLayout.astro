@@ -46,7 +46,7 @@ const readingTime = getReadingTime(typeof post.body === 'string' ? post.body : '
 const showUpdated = Boolean(updatedDate && date && updatedDate.toDateString() !== date.toDateString());
 
 const breadcrumbs = [
-  { name: 'Home', url: '/' },
+  { name: 'Inicio', url: '/' },
   { name: 'Blog', url: '/blog/' },
   ...(categories?.length ? [{ name: categories[0], url: `/categories/${taxonomySlug(categories[0])}/` }] : []),
   { name: title, url: pageURL }
@@ -118,15 +118,15 @@ const hasSeries = Boolean(series);
               </span>
             )}
             {showUpdated && updatedDate && (
-              <span class="inline-flex items-center gap-1.5" title="Last updated">
+              <span class="inline-flex items-center gap-1.5" title="Última actualización">
                 <Icon name="mdi:update" class="w-4 h-4 text-accent-500 dark:text-accent-400" />
-                Updated
+                Actualizado
                 <time datetime={updatedDate.toISOString()}>{formatDate(updatedDate)}</time>
               </span>
             )}
             <span class="inline-flex items-center gap-1.5">
               <Icon name="mdi:clock-outline" class="w-4 h-4" />
-              {readingTime.minutes > 0 ? readingTime.minutes : 1} min read
+              {readingTime.minutes > 0 ? readingTime.minutes : 1} min de lectura
             </span>
           </div>
 
@@ -173,7 +173,7 @@ const hasSeries = Boolean(series);
             )}
             <div class="min-w-0">
               <p class="text-sm font-semibold text-gray-900 dark:text-white">
-                Written by{" "}
+                Escrito por{" "}
                 <a
                   href={authorProfile.url}
                   class="text-accent-600 transition-colors duration-200 hover:text-accent-700 dark:text-accent-400 dark:hover:text-accent-300"
@@ -190,7 +190,7 @@ const hasSeries = Boolean(series);
                 href={authorProfile.url}
                 class="group mt-2 inline-flex items-center gap-1 text-sm font-medium text-accent-600 transition-colors duration-200 hover:text-accent-700 dark:text-accent-400 dark:hover:text-accent-300"
               >
-                {`More guides from ${authorProfile.name}`}
+                {`Más artículos de ${authorProfile.name}`}
                 <Icon
                   name="mdi:arrow-right"
                   class="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5"

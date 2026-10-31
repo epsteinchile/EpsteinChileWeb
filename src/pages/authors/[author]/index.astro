@@ -61,13 +61,13 @@ const displayName = authorDetails ? authorDetails.data.title : formattedAuthor;
 <ArchivePage
     title={`Posts by ${displayName} - ${siteConfig.title}`}
     description={`Browse all posts written by ${displayName}`}
-    heading={`Author: ${displayName}`}
-    subline={`${posts.length} ${posts.length === 1 ? "post" : "posts"} by this author`}
+    heading={`Autor: ${displayName}`}
+    subline={`${posts.length} ${posts.length === 1 ? "publicación" : "publicaciones"} de este autor`}
     basePath={`/authors/${slug}`}
     posts={posts}
     page={1}
     indexable={!siteConfig.noindex.authors}
-    emptyMessage="No posts found by this author."
+    emptyMessage="No hay publicaciones de este autor."
 >
     <Fragment slot="lead">
         {authorDetails && (

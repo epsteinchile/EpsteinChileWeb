@@ -56,17 +56,15 @@ const featuredUrl = post ? getPostUrl(post) : withBase('/blog/');
 
             <ul class="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm text-gray-500 dark:text-gray-400">
               <li class="inline-flex items-center gap-1.5">
-                <Icon name="mdi:book-open-page-variant-outline" class="w-4 h-4 text-accent-600 dark:text-accent-400" />
-                {stats.guides} {siteConfig.hero.statsLabels.guides}
-              </li>
-              <li class="inline-flex items-center gap-1.5">
                 <Icon name="mdi:tag-outline" class="w-4 h-4 text-accent-600 dark:text-accent-400" />
                 {stats.topics} {siteConfig.hero.statsLabels.topics}
               </li>
+<!--              
               <li class="inline-flex items-center gap-1.5">
                 <Icon name="mdi:account-group-outline" class="w-4 h-4 text-accent-600 dark:text-accent-400" />
                 {stats.authors} {stats.authors === 1 ? siteConfig.hero.statsLabels.author : siteConfig.hero.statsLabels.authors}
               </li>
+-->
             </ul>
 
             <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
@@ -100,7 +98,7 @@ const featuredUrl = post ? getPostUrl(post) : withBase('/blog/');
 
             {socialLinks.length > 0 && (
               <div class="mt-8 flex items-center gap-1">
-                <span class="mr-2 text-xs text-gray-500 dark:text-gray-400">Follow along</span>
+                <span class="mr-2 text-xs text-gray-500 dark:text-gray-400">Síguenos en:</span>
                 {socialLinks.map(([platform, url]) => {
                   const isBluesky = (url as string).includes('bsky.app');
                   return (
@@ -141,7 +139,7 @@ const featuredUrl = post ? getPostUrl(post) : withBase('/blog/');
                     fetchpriority="high"
                   />
                   <span class="absolute left-3 top-3 rounded-full bg-accent-600 px-3 py-1 text-xs font-semibold text-white shadow-sm">
-                    Latest
+                    Publicación más reciente
                   </span>
                 </div>
               )}
@@ -165,7 +163,7 @@ const featuredUrl = post ? getPostUrl(post) : withBase('/blog/');
                     <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>
                   )}
                   {readingTime && (
-                    <span>{readingTime.minutes > 0 ? readingTime.minutes : 1} min read</span>
+                    <span>{readingTime.minutes > 0 ? readingTime.minutes : 1} min de lectura</span>
                   )}
                 </div>
               </div>

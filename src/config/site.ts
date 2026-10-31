@@ -1,4 +1,4 @@
-import logo from "@assets/favicons/bitdoze_logo_better.svg";
+import logo from "@assets/favicons/logo_epstein_chile.svg";
 
 /**
  * Central site configuration — the single place for identity, homepage copy,
@@ -13,19 +13,19 @@ export const siteConfig = {
   // ---------------------------------------------------------------------------
   // Identity
   // ---------------------------------------------------------------------------
-  lang: "en",
-  locale: "en_US",
-  title: "Bit Doze Astro Blog Theme",
-  brandName: "Bit Doze",
+  lang: "es",
+  locale: "es_CL",
+  title: "Archivos Epstein en Español",
+  brandName: "Epstein Chile",
   logo,
   logoWidth: 160,
   logoHeight: 40,
-  logoText: "Bit Doze Astro Blog Theme",
-  author: "Dragos Balota",
-  description: "A modern, responsive blog theme for Astro with support for tags, categories, and series.",
+  logoText: "Epstein Chile logo",
+  author: "EpsteinChile",
+  description: "",
   /** Paragraph under the hero headline and in the empty-blog hero. */
-  heroDescription: "Join the community to learn more about VPS hosting, blogging, and modern content management.",
-  footerDescription: "Practical resources and tutorials for web developers and technology enthusiasts.",
+  heroDescription: "Únete a nuestra comunidad para conocer más sobre el caso de tráfico de menores, corrupción y extorsión internacional más relevante de la historia.",
+  footerDescription: "El caso Epstein en español y en simple.",
   ogImage: "/images/og-image.png",
   postsPerPage: 11,
 
@@ -34,18 +34,18 @@ export const siteConfig = {
   // ---------------------------------------------------------------------------
   hero: {
     /** Headline is split so the accent phrase can be highlighted in the brand color. */
-    title: "Modern web guides that",
-    titleAccent: "actually ship",
+    title: "Traduciendo archivos del caso",
+    titleAccent: "Epstein al español.",
     /** Primary call to action; href is root-relative and base-aware at render time. */
-    primaryCta: { label: "Browse articles", href: "/blog/" },
+    primaryCta: { label: "Revisa nuestros artículos", href: "/blog/" },
     /** Secondary in-page jump; only rendered when a Learning Paths section exists. */
-    secondaryCta: { label: "Find your path", href: "#learning-paths" },
+    secondaryCta: { label: "Revisa la línea de tiempo", href: "#learning-paths" },
     /** Labels for the proof counts; `author` is used when the count is 1. */
     statsLabels: {
       guides: "practical guides",
-      topics: "topics to explore",
-      author: "author writing",
-      authors: "authors writing",
+      topics: "temas para explorar",
+      author: "autor escribiendo",
+      authors: "autores escribiendo",
     },
   },
 
@@ -60,53 +60,47 @@ export const siteConfig = {
     /** Editor's picks from posts flagged `featured: true`. */
     featured: {
       limit: 3,
-      title: "Featured Posts",
-      description: "Hand-picked guides worth starting with.",
+      title: "Artículos recomendados",
+      description: "Los post más relevantes del caso.",
     },
 
     /** Newest posts that are not in the hero, featured grid, or a series. */
     latest: {
       limit: 6,
-      title: "Latest Articles",
-      actionLabel: "View all posts",
+      title: "Últimos Articulos",
+      actionLabel: "Ver todos los artículos",
     },
 
     /** Series in position order plus the largest categories. */
     learningPaths: {
-      title: "Learning paths",
-      description: "Follow a series end to end, or go deep on one topic.",
-      actionLabel: "Browse series",
+      title: "Línea de tiempo",
+      description: "Visualiza las acciones cometidas por la clase Epstein en orden cronológico.",
+      actionLabel: "Explorar línea de tiempo",
     },
 
     /** Tag-driven topic columns; labels are matched case-insensitively. */
     popularTopics: {
-      title: "Popular Topics",
-      description: "Browse posts by topic",
-      tags: ["Astro", "VPS", "Blogging"],
+      title: "Los artículos más populares",
+      description: "Los artículos más vistos por la comunidad",
+      tags: ["Donald Trump", "VPS", "Blogging"],
       postsPerTag: 4,
     },
 
     /** Compact taxonomy row. `icon` accepts any Astro Icon / Iconify name. */
     explore: {
-      title: "Explore Content",
-      description: "Browse our content by category, author, or tag",
+      title: "Explora el contenido",
+      description: "Explora nuestro contenido por categoría o etiqueta",
       cards: [
         {
           href: "/categories/",
-          title: "Categories",
-          description: "Browse posts by topic",
+          title: "Categorías",
+          description: "Explora artículos según categoría",
           icon: "mdi:folder-multiple-outline",
         },
         {
-          href: "/authors/",
-          title: "Authors",
-          description: "Meet our content creators",
-          icon: "mdi:account-group-outline",
-        },
-        {
           href: "/tags/",
-          title: "Tags",
-          description: "Find content by specific topics",
+          title: "Etiquetas",
+          description: "Encuentra contenido según su etiqueta",
           icon: "mdi:tag-outline",
         },
       ],
@@ -117,8 +111,8 @@ export const siteConfig = {
   // Footer
   // ---------------------------------------------------------------------------
   footer: {
-    exploreTitle: "Explore",
-    latestTitle: "Latest Posts",
+    exploreTitle: "Navega",
+    latestTitle: "Últimos artículos",
   },
 
   // ---------------------------------------------------------------------------
@@ -129,18 +123,18 @@ export const siteConfig = {
   pages: {
     blog: {
       title: "Blog",
-      description: "Explore our latest articles, tutorials, and insights",
-      subline: "Explore our latest articles, tutorials, and insights",
+      description: "Explora todas nuestras publicaciones",
+      subline: "Explora todas nuestras publicaciones",
     },
     categories: {
-      title: "Categories",
-      description: "Browse all categories of posts on our blog",
-      subline: "Browse posts by category",
+      title: "Categorías",
+      description: "Explora las categorías de nuestros artículos",
+      subline: "Explora artículos por categoría",
     },
     tags: {
-      title: "Tags",
-      description: "Browse all tags and topics on our blog",
-      subline: "Browse posts by tag",
+      title: "Etiquetas",
+      description: "Explora todas las etiquetas de nuestro blog",
+      subline: "Explora los artículos según etiquetas",
     },
     authors: {
       title: "Authors",
@@ -165,13 +159,13 @@ export const siteConfig = {
       noResults: "No results found. Try a different search term.",
     },
     notFound: {
-      title: "404 - Page Not Found",
-      description: "The page you're looking for doesn't exist.",
+      title: "404 - Página no Encontrada",
+      description: "La página que buscas no existe.",
       heading: "404",
-      subheading: "Page Not Found",
-      message: "The page you're looking for doesn't exist or has been moved.",
-      homeLabel: "Go Home",
-      blogLabel: "Browse Blog",
+      subheading: "Página no Encontrada",
+      message: "La página que buscas no existe o ha sido trasladada.",
+      homeLabel: "Ir al inicio",
+      blogLabel: "Explorar artículos",
     },
   },
 

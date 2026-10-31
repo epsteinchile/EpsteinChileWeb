@@ -37,11 +37,11 @@ const formattedTag = tag.charAt(0).toUpperCase() + tag.slice(1);
 <ArchivePage
     title={`Posts tagged with ${formattedTag} - ${siteConfig.title}`}
     description={`Browse all posts tagged with ${formattedTag}`}
-    heading={`Tag: #${formattedTag}`}
-    subline={`${posts.length} ${posts.length === 1 ? "post" : "posts"} with this tag`}
+    heading={`Etiqueta: #${formattedTag}`}
+    subline={`${posts.length} ${posts.length === 1 ? "publicación" : "publicaciones"} con esta etiqueta`}
     basePath={`/tags/${slug}`}
     posts={posts}
     page={1}
     indexable={!siteConfig.noindex.tags}
-    emptyMessage="No posts found with this tag."
+    emptyMessage="Ninguna publicación encontrada con esta etiqueta."
 />

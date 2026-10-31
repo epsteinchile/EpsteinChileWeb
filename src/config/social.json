@@ -1,18 +1,12 @@
 {
-  "facebook": "",
-  "twitter": "https://twitter.com/bitdoze",
-  "instagram": "",
-  "youtube": "",
-  "linkedin": "",
+  "facebook": "https://www.facebook.com/asdasdas",
+  "instagram": "https://www.instagram.com/asdasdasd",
+  "youtube": "https://www.youtube.com/asdasdasd",
   "github": "",
-  "gitlab": "",
   "medium": "",
-  "codepen": "",
   "bitbucket": "",
-  "dribbble": "",
   "behance": "",
   "pinterest": "",
-  "soundcloud": "",
   "tumblr": "",
   "reddit": "",
   "vk": "",
@@ -22,9 +16,7 @@
   "tiktok": "",
   "foursquare": "",
   "rss": "",
-  "email": "",
-  "phone": "",
-  "address": "",
   "skype": "",
-  "website": ""
+  "mastodon": "https://mastodon.social/@epstein_chile",
+  "telegram": "https://t.me/+Mz0L8DapMfI4OGIx"
 }
