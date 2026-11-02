@@ -41,7 +41,7 @@ const authorsCollection = defineCollection({
       .optional()
       .refine((value) => value === undefined || value.startsWith("/"), {
         message:
-          "Author image must be a public asset path starting with '/' (e.g. /images/authors/dragos.webp), not a relative source path.",
+          "Author image must be a public asset path starting with '/' (e.g. /images/authors/image.webp), not a relative source path.",
       }),
     description: z.string().optional(),
     social: z
