@@ -32,7 +32,7 @@ const page = siteConfig.pages.search;
       </div>
       <noscript>
         <p class="mt-4 text-center text-sm text-gray-600 dark:text-gray-300">
-          Browsing search results requires JavaScript. <a class="text-accent-600 dark:text-accent-400 underline hover:text-accent-500" href={blogUrl}>Browse all posts</a> instead.
+          Para navegar por los resultados de búsqueda se requiere JavaScript. <a class="text-accent-600 dark:text-accent-400 underline hover:text-accent-500" href={blogUrl}>Explorar todas las publicaciones</a> en su lugar.
         </p>
       </noscript>
     </form>
@@ -173,7 +173,7 @@ const page = siteConfig.pages.search;
 
       loadPromise = (async () => {
         const response = await fetch(import.meta.env.BASE_URL + 'search.json');
-        if (!response.ok) throw new Error('Failed to fetch search data');
+        if (!response.ok) throw new Error('No se pudieron obtener los datos de búsqueda');
         const searchData = await response.json() as SearchPost[];
         return new Fuse(searchData, {
           keys: [
@@ -227,16 +227,16 @@ const page = siteConfig.pages.search;
         results.forEach((result) => searchResults.appendChild(createResultCard(result.item)));
         noResults.classList.toggle('hidden', totalResults !== 0);
         searchInfo.textContent = totalResults
-          ? 'Found ' + totalResults + ' result' + (totalResults === 1 ? '' : 's') + ' for “' + query + '”'
-          : 'No results found for “' + query + '”';
+          ? 'Se encontraron ' + totalResults + ' resultados' + (totalResults === 1 ? '' : 's') + ' para “' + query + '”'
+          : 'No se encontraron resultados para “' + query + '”';
         if (totalResults > MAX_RESULTS) {
-          truncated.textContent = 'Showing ' + results.length + ' of ' + totalResults + ' results for “' + query + '”.';
+          truncated.textContent = 'Mostrando ' + results.length + ' de ' + totalResults + ' resultados para “' + query + '”.';
           truncated.classList.remove('hidden');
         }
       } catch (error) {
         if (sequence !== searchSequence) return;
-        console.error('Error loading search data:', error);
-        searchInfo.textContent = 'Search is unavailable right now. Please try again later.';
+        console.error('Error al cargar datos de búsqueda:', error);
+        searchInfo.textContent = 'La búsqueda no está disponible en este momento. Por favor inténtalo de nuevo más tarde.';
       }
     };
 

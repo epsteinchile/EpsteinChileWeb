@@ -41,4 +41,7 @@ export default defineConfig({
     prefetchAll: false,
     defaultStrategy: 'hover',
   },
+  devToolbar: {
+    enabled: false,
+  },
 });

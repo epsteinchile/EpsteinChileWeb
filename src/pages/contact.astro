@@ -6,10 +6,10 @@ import { siteConfig } from "@config/site";
 
 // Contact information from config file
 const title = siteConfig.pages.contact.title;
-const { address, email, phone } = config.contactinfo;
+const { address, email, phone, whatsapp } = config.contactinfo;
 const { contact_form_action } = config.params;
 const formConfigured = contact_form_action !== "#";
-const hasContactInfo = Boolean(address || email || phone);
+const hasContactInfo = Boolean(address || email || phone || whatsapp);
 ---
 
 <Layout
@@ -21,23 +21,22 @@ const hasContactInfo = Boolean(address || email || phone);
       <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-10 text-center">{title}</h1>
       <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
         <div class="md:col-span-4">
-          <p class="mb-8 text-2xl font-bold text-gray-900 dark:text-white">Contact Info</p>
-          {hasContactInfo ? (
-            <ul class="flex flex-col space-y-8">
-            {address && <li>
+          <p class="mb-8 text-2xl font-bold text-gray-900 dark:text-white">Información de contacto</p>
+           <ul class="flex flex-col space-y-8">
+            {whatsapp && <li>
               <div class="flex text-gray-900 dark:text-white items-center text-xl">
                 <Icon
-                  name="mdi:card-account-details-star-outline"
+                  name="mdi:whatsapp"
                   class="mr-3 text-accent-600 dark:text-accent-400 text-2xl"
                 />
-                <p class="font-semibold">Address</p>
+                <p class="font-semibold">Canal de Whatsapp</p>
               </div>
-              <p class="mt-2 leading-5 pl-8 text-gray-700 dark:text-gray-300">{address}</p>
+              <p class="mt-2 leading-5 pl-8 text-gray-700 dark:text-gray-300">{whatsapp}</p>
             </li>}
             {email && <li>
               <div class="flex text-gray-900 dark:text-white items-center text-xl">
                 <Icon name="mdi:email" class="mr-3 text-accent-600 dark:text-accent-400 text-2xl" />
-                <p class="font-semibold">Email</p>
+                <p class="font-semibold">Correo</p>
               </div>
               <p class="mt-2 leading-5 pl-8 text-gray-700 dark:text-gray-300">
                 <a href={`mailto:${email}`} class="hover:text-accent-600 dark:hover:text-accent-400 transition-colors">{email}</a>
@@ -53,11 +52,6 @@ const hasContactInfo = Boolean(address || email || phone);
               </p>
             </li>}
             </ul>
-          ) : (
-            <p class="text-gray-600 dark:text-gray-300">
-              Add your public contact details in <code>src/config/config.json</code>.
-            </p>
-          )}
         </div>
         <div class="md:col-span-8">
           <form
@@ -68,13 +62,13 @@ const hasContactInfo = Boolean(address || email || phone);
           >
             {!formConfigured && (
               <p class="mb-5 rounded-md border border-amber-300 bg-amber-50 p-3 text-sm text-amber-900 dark:border-amber-700 dark:bg-amber-950/40 dark:text-amber-200" role="status">
-                Contact form delivery is not configured yet. Set a form endpoint in <code>src/config/config.json</code>.
+                El envío del formulario de contacto aún no está configurado.
               </p>
             )}
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
               <div>
                 <label class="block text-gray-700 dark:text-gray-300 mb-2" for="name">
-                  Name <span class="text-red-600">*</span>
+                  Nombre <span class="text-red-600">*</span>
                 </label>
                 <input
                   id="name"
@@ -87,7 +81,7 @@ const hasContactInfo = Boolean(address || email || phone);
               </div>
               <div>
                 <label class="block text-gray-700 dark:text-gray-300 mb-2" for="email">
-                  Email <span class="text-red-600">*</span>
+                  Correo <span class="text-red-600">*</span>
                 </label>
                 <input
                   id="email"
@@ -100,7 +94,7 @@ const hasContactInfo = Boolean(address || email || phone);
               </div>
             </div>
             <div class="mb-4">
-              <label class="block text-gray-700 dark:text-gray-300 mb-2" for="subject">Subject</label>
+              <label class="block text-gray-700 dark:text-gray-300 mb-2" for="subject">Asunto</label>
               <input 
                 id="subject"
                 class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
@@ -110,7 +104,7 @@ const hasContactInfo = Boolean(address || email || phone);
             </div>
             <div class="mb-6">
               <label class="block text-gray-700 dark:text-gray-300 mb-2" for="message">
-                Message <span class="text-red-600">*</span>
+                Mensaje <span class="text-red-600">*</span>
               </label>
               <textarea 
                 id="message"
@@ -126,7 +120,7 @@ const hasContactInfo = Boolean(address || email || phone);
                 disabled={!formConfigured}
                 class="px-6 py-3 bg-accent-600 hover:bg-accent-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white rounded-md transition-colors duration-300 font-medium"
               >
-                {formConfigured ? "Submit Now" : "Form Not Configured"}
+                {formConfigured ? "Enviar ahora" : "Formulario no configurado"}
               </button>
             </div>
           </form>

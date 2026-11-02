@@ -6,6 +6,10 @@
   "contactinfo": {
     "address": "",
     "email": "",
-    "phone": ""
+    "phone": "",
+    "whatsapp": "",
+    "telegram": "",
+    "signal": "",
+    "session": "" 
   }
 }
