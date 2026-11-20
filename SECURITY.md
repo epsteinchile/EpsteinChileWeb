@@ -6,7 +6,7 @@ Only the latest release of this theme receives security fixes. If you are runnin
 
 ## Reporting a vulnerability
 
-Report vulnerabilities privately through [GitHub security advisories](https://github.com/bitdoze/bitdoze-astro-theme/security/advisories/new). Do not open a public issue for something you believe is exploitable.
+Report vulnerabilities privately through [GitHub security advisories](). Do not open a public issue for something you believe is exploitable.
 
 Please include:
 
